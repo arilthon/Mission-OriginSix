@@ -55,6 +55,17 @@ scrollReveal.reveal(
 #about .image, #about .text,
 #services header, #services .card,
 #testimonials header,#testimonials .testimonials
-#contact .text, #contact .links`,
+#contact .text, #contact .links,
+footer .brand, footer .social`,
   { intervalos: 100 }
 )
+
+/* Botao voltar para o top  */
+const backToTopButton = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+})
